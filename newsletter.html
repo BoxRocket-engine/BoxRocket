@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,7 +70,9 @@
 
 
 
-        <form id="newsletterForm">
+        <form
+            action="https://formspree.io/f/mjykbwdg"
+            method="POST">
 
 
             <label for="email">
@@ -79,9 +82,17 @@
 
             <input
                 id="email"
+                name="email"
                 type="email"
                 placeholder="you@example.com"
                 required
+            >
+
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="New BoxRocket Newsletter Subscriber"
             >
 
 
@@ -93,17 +104,10 @@
         </form>
 
 
-
-        <div id="message"
-             class="message">
-        </div>
-
-
         <p class="small-note">
 
-            Newsletter subscriptions will be
-            connected to a real mailing service
-            later.
+            By subscribing, you'll receive
+            BoxRocket development and release updates.
 
         </p>
 
@@ -129,31 +133,7 @@
 </footer>
 
 
-
-<script>
-
-document
-    .getElementById("newsletterForm")
-    .addEventListener(
-        "submit",
-        function(event)
-        {
-
-            event.preventDefault();
-
-            document
-                .getElementById("message")
-                .textContent =
-                "Thanks! You're on the BoxRocket list.";
-
-            this.reset();
-
-        }
-    );
-
-</script>
-
-
 </body>
 
 </html>
+```
