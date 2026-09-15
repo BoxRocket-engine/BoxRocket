@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>BoxRocket — Newsletter</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+    <div class="brand">
+        BOXROCKET
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            DOWNLOAD
+        </a>
+
+        <a class="active"
+           href="newsletter.html">
+            NEWSLETTER
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="newsletter-page">
+
+
+    <section class="newsletter-card">
+
+
+        <div class="eyebrow">
+            BOXROCKET NEWSLETTER
+        </div>
+
+
+        <h1>
+            Stay in the loop.
+        </h1>
+
+
+        <p>
+
+            Get updates about new BoxRocket builds,
+            engine features, development news,
+            and releases.
+
+        </p>
+
+
+
+        <form id="newsletterForm">
+
+
+            <label for="email">
+                EMAIL ADDRESS
+            </label>
+
+
+            <input
+                id="email"
+                type="email"
+                placeholder="you@example.com"
+                required
+            >
+
+
+            <button type="submit">
+                SUBSCRIBE
+            </button>
+
+
+        </form>
+
+
+
+        <div id="message"
+             class="message">
+        </div>
+
+
+        <p class="small-note">
+
+            Newsletter subscriptions will be
+            connected to a real mailing service
+            later.
+
+        </p>
+
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <span>
+        BOXROCKET
+    </span>
+
+
+    <span>
+        © 2026 BoxRocket
+    </span>
+
+</footer>
+
+
+
+<script>
+
+document
+    .getElementById("newsletterForm")
+    .addEventListener(
+        "submit",
+        function(event)
+        {
+
+            event.preventDefault();
+
+            document
+                .getElementById("message")
+                .textContent =
+                "Thanks! You're on the BoxRocket list.";
+
+            this.reset();
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>
